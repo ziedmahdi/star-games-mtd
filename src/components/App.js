@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { End } from './End';
 import { Buttons } from './Buttons';
+import { Star } from './Star';
 
 function App() {
   let buttonStates = ['used', 'wrong', 'possible', 'unused','unused', 'unused', 'unused', 'unused', 'unused']
@@ -10,6 +11,8 @@ function App() {
       <End fail={true} action={() => {}}/>
       <hr/>
       <Buttons states={buttonStates} />
+      <hr/>
+      <Star />
       
     </div>
   );
