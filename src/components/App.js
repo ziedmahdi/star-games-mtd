@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { End } from './End';
 import { Buttons } from './Buttons';
-import { Star } from './Star';
+import { Stars } from './Stars';
 
 function App() {
   let buttonStates = ['used', 'wrong', 'possible', 'unused','unused', 'unused', 'unused', 'unused', 'unused']
@@ -12,7 +12,7 @@ function App() {
       <hr/>
       <Buttons states={buttonStates} />
       <hr/>
-      <Star />
+      <Stars count="6" />
       
     </div>
   );
