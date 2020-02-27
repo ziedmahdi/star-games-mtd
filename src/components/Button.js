@@ -3,21 +3,28 @@ import React, {Component} from "react";
 export class Button extends Component {
     constructor(props) {
         super(props);
+        
+        this.handleClick = this.handleClick.bind(this);
+    }
 
+    handleClick() {
+        this.props.action(this.props.number);
+    }
+
+    render() {
         const colors = {
-            unused: 'gris',
+            unused: 'gray',
             used: 'green',
             wrong: 'red',
             possible: 'blue'
         }
 
-        this.style = {
-            backgroundColor: colors[props.state]
+        const style = {
+            backgroundColor: colors[this.props.state]
         }
-    }
-    render() {
+        
         return (
-            <button style={this.style} onClick={this.props.action}>{this.props.number}</button>
+            <button style={style} onClick={this.handleClick}>{this.props.number}</button>
         )
     }
 }

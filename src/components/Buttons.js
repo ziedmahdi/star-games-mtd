@@ -6,7 +6,7 @@ export class Buttons extends Component {
     render() {
         return this.props.states.map((element, index) => {
             return (
-                <Button key={index} state={element} number={index + 1}/>
+                <Button action={this.props.handleButtonClick} key={index} state={element} number={index + 1}/>
             )
         })
     }
